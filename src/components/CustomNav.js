@@ -19,17 +19,17 @@ class CustomNavbar extends Component {
     }
 
     render() {
+        const { isOpen } = this.state;
         return (
-    <Col md={{size: 3}} style={{'overflow-y':'scroll'}}>
-        <Navbar color="light" light expand="md">
-          <NavbarToggler onClick={this.toggle}/>
+    <Col md={{size: 3}} className="fix-scroll" style={{'padding-left':'0px'}}>
+        <Navbar color="inherit" light expand="md"style={{'padding-left':'0px'}}>
+          <NavbarToggler onClick={this.toggle} style={isOpen ? {} : {'width':'65%'}}/>
           <Collapse isOpen={this.state.isOpen} navbar className="collapse-right">
           <Nav className="flex-column">
-            <Row>
-                <Col>
+            
                     <NavMap items={navItems.filter(i=>i["className"]!=='tags')} />
-                    </Col>
-            </Row>
+               
+            
             <div className="tags">
             <p className="contact">
              © {new Date().getFullYear()}<br />dom "at" dominicdecarlo "dot" com<br/></p>

@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../../../components/layout'
-import Link  from '../../../components/Link'
+import Layout from '../../components/layout'
+import Link  from '../../components/Link'
 import { Container, Row, Col } from 'reactstrap'
 
 

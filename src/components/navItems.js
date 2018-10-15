@@ -46,7 +46,7 @@ const navItems = [
     }, 
     {
       name: 'Amateur Fest 2018 Poster',
-      to: '/projects/2018/amateur-hour-2018-poster/',
+      to: '/projects/2018/amateur-fest-2018-poster/',
       className:'default',
     }, 
     {
@@ -201,32 +201,32 @@ const navItems = [
       className:'default bottom',
     },
     {
-      name: "Branding",
+      name: "Branding ",
       to: '/tag/branding/',
       className:'tags',
     },
     {
-      name: "Fine_Art",
+      name: "Fine_Art ",
       to: '/tag/fineart/',
       className:'tags',
     },
     {
-      name: "Illustration",
+      name: "Illustration ",
       to: '/tag/illustration',
       className:'tags',
     },
     {
-      name: "Logo",
+      name: "Logo ",
       to: '/tag/logo',
       className:'tags',
     },
     {
-      name: "Posters",
+      name: "Posters ",
       to: '/tag/posters',
       className:'tags',
     },
     {
-      name: "Print_Design",
+      name: "Print_Design ",
       to: '/tag/print_design',
       className:'tags',
     }

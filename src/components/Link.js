@@ -16,9 +16,9 @@ const Link = ({ children, to, ...other }) => {
     )
   } else if (to === '') {
     return (
-    <li {...other}>
+    <span {...other}>
     {children}
-    </li>
+    </span>
     )
   }
   return (

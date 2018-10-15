@@ -6,10 +6,23 @@
 
 
 .bold {
+    font-weight: 900;
+    margin-bottom: 0px;
 }
 
+
 .tags {
-    /* display: inline !important; */
+    display: inline !important;
+    width: 175px;
+}
+
+.nav-separate-scroll {
+    position: fixed;
+    overflow-y: scroll;
+}
+
+.nav a {
+    color: grey;
 }
 
 
@@ -17,18 +30,32 @@
     position: fixed !important;
     right: 0;
     bottom: 0;
-    z-index: 3 !important;
+    z-index: 1 !important;
 
 }
+
+
+.fix-scroll {
+    position: fixed;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
 @media screen and (max-width:400px) {
+  
+
+
     .navbar-toggler {
         position: fixed !important;
-        right: 5%;
+        right: 0;
         bottom: 0;
-        z-index: 3 !important;
+        z-index: 1 !important;
         width: 15%;
         background-color: white !important;
         border: solid 1px #d0d0d0;
+        padding-left: 0px;
+        -webkit-transition: all 250ms ease-in-out;
+        transition: all 250ms ease-in-out;
     }
 
     .bottom {
@@ -37,8 +64,9 @@
         height: 5vh;
     }
     .navbar {
+        padding-left: 0px !important;
         position: fixed !important;
-        right: 10 !important;
+        right: 0!important;
         left: 0;
         overflow-y: scroll !important;
         overflow-x: visible;
@@ -46,27 +74,25 @@
         max-height: 100vh !important;
         min-height: 0vh;
         max-width: 100vh;
-        width: 100vh;
         list-style: none;
         padding-left: 0px !important;
         word-wrap: break-word !important;
-        word-break: break-word;
+        background: #f9f9f9;
         white-space: normal !important;
-        word-break: break-all !important;
     }
     
     
     .nav-item {
+        padding-left: 0px;
         margin: 0px !important;
         
         color: black
         
     }
     .tags {
-        display: inline;
-        word-wrap: break-word;
-        margin: 0px 5px 5px 0px !important;
-        width: 43vh;
+        display: inline-block;
+        margin: 0px 10px 10px 0px !important;
+        width: 75vw;
         
     }
 
@@ -76,6 +102,12 @@
     }
     .nav-item a {
         
+    }
+    .collapse {
+        padding-left: 0px !important;
+    }
+    .contact {
+        font-size: 15px !important
     }
 
     .bold {

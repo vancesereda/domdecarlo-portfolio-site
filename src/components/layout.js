@@ -7,7 +7,16 @@ import CustomNav from './CustomNav'
 import Header from './header'
 import './layout.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import Typography from 'typography'
+import { TypographyStyle, GoogleFont } from 'react-typography'
 
+const typography = new Typography({
+  baseFontSize: '16px',
+  baseLineHeight: 1.666,
+  headerFontFamily: ['Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+  bodyFontFamily: ['Helvetica Neue','Verdana', 'Helvetica', 'Arial','sans-serif'],
+  // See below for the full list of options.
+})
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,21 +40,26 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
+        <TypographyStyle typography = {typography} />
         <Container>
           <Row>
-          <CustomNav />
-          <Col>
+          <CustomNav/>
+          
           <span className="sm-scrn">
-            <div style={{'z-index': '-1', 'position':'fixed', 'overflow-y':'scroll', 'height':'100vh', 'width': '95vw'}}>
+            <div style={{'z-index': '-1', 'position':'fixed !important', 'overflow-y':'scroll', 'width': '100vw'}}>
               {children}
             </div>
           </span>
+          
           <span className="lg-scrn">
-            {children}
+            <div className="fix-scroll">
+                {children}
+                
+            </div>
           </span>
-          </Col>
           </Row>
         </Container>
+        
       </>
     )}
   />
